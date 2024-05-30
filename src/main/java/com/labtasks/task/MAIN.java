@@ -7,7 +7,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MAIN extends Application {
+public class MAIN extends Application
+{
 
     private static Stage primaryStage;
     private static DatabaseConnection databaseConnection;
@@ -18,10 +19,11 @@ public class MAIN extends Application {
         primaryStage = stage;
         databaseConnection = new DatabaseConnection();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(MainMenuController.class.getResource("/com/labtasks/task/MainMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AddItemsController.class.getResource("/com/labtasks/task/AddItems.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 200);
         stage.setTitle("Main Menu");
         stage.setScene(scene);
+        stage.setFullScreen(true);
         stage.show();
     }
 
